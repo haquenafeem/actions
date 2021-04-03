@@ -8,7 +8,7 @@ on:
 
 jobs:
 
-  test:
+  testrun:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -20,19 +20,10 @@ jobs:
 
     - name: Test
       run: go test -v ./calculator
-  
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.13
     
-    - name: Build
-      run: go build cmd/main.go
+    - name: Run
+      run: go run cmd/main.go
+  
+    
+    
 
-    - name: run
-      run: ./main
