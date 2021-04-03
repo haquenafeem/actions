@@ -4,7 +4,7 @@ import "testing"
 
 var AddResultSet = []struct{ Input1, Input2, Result int }{{1, 2, 3}, {4, 5, 9}}
 var SubtractResultSet = []struct{ Input1, Input2, Result int }{{3, 2, 1}, {6, 3, 3}}
-var MultiplyResultSet = []struct{ Input1, Input2, Result int }{{3, 2, 7}, {6, 3, 18}}
+var MultiplyResultSet = []struct{ Input1, Input2, Result int }{{3, 2, 6}, {6, 3, 18}}
 
 func TestAdd(t *testing.T) {
 	for _, v := range AddResultSet {
